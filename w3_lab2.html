@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p><b>แบบฟอร์มจองทัวร์</b></p>
+    <fieldset>
+        <legend>ข้อมูลทั่วไป</legend>
+        <b>ชื่อ-สกุล:</b><br><input type="text" placeholder="กรอกชื่อ-สกุล" id="name" name="name" required>*<br>
+
+        <b>Email:</b><br>
+        <input type="email" id="email" name="name"required>*<br>
+
+        <b>โทรศัพท์:</b><br>
+        <input type="tel" id="number_phone" name="name" value="+66" required>*<br>
+
+        <b>ที่อยู่:</b><br>
+        <textarea id="address" name="address" rows="4" cols="30">
+            </textarea><br>
+        <b>รหัสไปรษณีย์:</b>
+        <input type="text" name="zip" pattern="[0-9]{5}*" maxlength="5" ><br>
+        <b>รูปผู้จอง:</b>
+        <input type="file" id="myfile" name="myfile">
+
+
+    </fieldset>
+
+    <fieldset>
+        <legend>ข้อมูลเข้าสู่ระบบ</legend>
+        <b>Username:</b><br>
+        <input type="text" id="name" name="name" pattern="[0-9][A-Z][a-z]{8,} | [_]{8,} "><br>
+        <b><i>ประกอบด้วยตัวเลข&nbsp;ตัวอักษร&nbsp;หรือ_ตั้งแต่8ตัวขึ้นไป</i></b><br>
+        <b>Password:</b><br>
+        <input type="password" id="pass" name="password" pattern="[A-Z][a-z]{8,}" /><br>
+        <b><i>ประกอบด้วยอักขระอะไรก็ได้8&nbsp;ตัวขึ้นไป</i></b><br>
+    </fieldset>
+    <fieldset>
+
+        <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+        <label><b>แพคเก็จทัวร์</b>
+            <select name="tour">
+
+                <option value="">----select----</option>
+                <option value="จีน">จีน</option>
+                <option value="เมกา">เมกา</option>
+                <option value="ไทย">ไทย</option>
+                <option value="ลาว">ลาว</option>
+                <option value="วากันด้า">วากันด้า</option>
+
+            </select>
+        </label><br>
+        <b>วันที่เดินทาง</b>
+        <input type="date" placeholder="dd-mm-yyyy" name="trip-start" value=" " min="1997-01-01" max="2030-12-31" /><br>
+
+        <b>จำนวนผู้เดินทาง</b>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" >
+        <b>เน้นการท่องเที่ยวแบบใด?</b><br>
+        <input type="checkbox" id="subscribe" name="subscribe" value="letter">
+        <label for="subscribe">ชอปปิ้ง? <br>
+            <input type="checkbox" id="subscribe" name="subscribe" value="letter">
+            <label for="subscribe">ธรรมชาติ<br>
+                <input type="checkbox" id="subscribe" name="subscribe" value="letter">
+                <label for="subscribe">ทะเล
+
+    </fieldset>
+    <b>ยอมรับเงื่อนไขและข้อตกลง</b>
+    <input type="radio" name="y/n" value="0" checked="checked" /> I agree
+    <input type="radio" name="y/n" value="1" /> I disagree
+
+</body>
+
+</html>
